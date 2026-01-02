@@ -1,0 +1,17 @@
+Fly.toml
+
+app = "fraud-verification-bot"
+
+[build]
+builder = "paketobuildpacks/builder:base"
+
+[env]
+PORT = "8080"
+
+[[services]]
+internal_port = 8080
+protocol = "tcp"
+
+[[services.ports]]
+port = 80
+handlers = ["http"]
